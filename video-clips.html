@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Clips | Sam Bogstedt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px 20px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .logo a img {
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .page-title {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+
+    .page-title span:first-child {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .page-title span:last-child {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      display: block;
+    }
+
+    .project-card h2 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="page-title">
+      <span>Sam Bogstedt</span><br>
+      <span>Color Grading Portfolio</span>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+  <a href="project1.html" class="project-card" data-category="video">
+    <img src="assets/project1-thumb.jpg" alt="Project 1 thumbnail">
+    <h2>DOMINANCE OR SUBMISSION? — Graduation Pre Collection Film</h2>
+  </a>
+  <a href="project2.html" class="project-card" data-category="video">
+    <img src="assets/project2-thumb.jpg" alt="Project 2 thumbnail">
+    <h2>DOUBLE HARD BASTARDS - Fashion Teaser</h2>
+  </a>
+  <a href="project3.html" class="project-card" data-category="video">
+    <img src="assets/project3-thumb.jpg" alt="Project 3 thumbnail">
+    <h2>THE LAST OF THE TEENAGE IDOLS - Graduation Fashion Teaser</h2>
+  </a>
+</section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/sambogstedt/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/sam-bogstedt-1901621b6/" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Sam Bogstedt</p>
+  </footer>
+</body>
+</html>

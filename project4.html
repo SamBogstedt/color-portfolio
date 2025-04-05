@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 4 | Sam Bogstedt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .logo a img {
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .page-title {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+
+    .page-title span:first-child {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .page-title span:last-child {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+
+    .gallery-section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .gallery-section h1 {
+      font-size: 2em;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .slider img {
+      width: 100%; /* Increase the width of images */
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <h1>IK BEEN BIJ JE - Documentary Trailer</h1>
+      <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <img src="assets/project4-1.jpg" alt="Still 1">
+          <img src="assets/project4-2.jpg" alt="Still 2">
+          <img src="assets/project4-3.jpg" alt="Still 3">
+          <img src="assets/project4-4.jpg" alt="Still 4">
+          <img src="assets/project4-5.jpg" alt="Still 5">
+          <img src="assets/project4-6.jpg" alt="Still 6">
+          <img src="assets/project4-7.jpg" alt="Still 7">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="credits">
+        <p><strong>Director:</strong> Evy Hachmang</p>
+        <p><strong>Camera:</strong> Vince van der Pol</p>
+        <p><strong>Edit:</strong> Jack Westerlaken</p>
+        <p><strong>Sound Mix & Master:</strong> Ting Fung Cheung</p>
+        <p><strong>Composer:</strong> Leon van Engelen</p>
+        <p><strong>Color Grading:</strong> Wouter Meeles</p>
+        <p><strong>Titels:</strong> Leon de Haas</p>
+        <p><strong>Coaching:</strong> Arjanne Laan (arjanne L.)</p>
+        <p><strong>Production:</strong> Studio Evy Hachmang</p>
+        <p><strong>Trailer Edit & Color:</strong> Sam Bogstedt - @New West</p>
+        <!-- Add "Link to Trailer" here -->
+        <p><strong><a href="https://vimeo.com/1072797966?share=copy" target="_blank" style="text-decoration: none; color: #111; font-weight: 600;">Link to Trailer</a></strong></p>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/sambogstedt/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/sam-bogstedt-1901621b6/" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Sam Bogstedt</p>
+    <a href="https://mail.google.com/mail/?view=cm&to=contact.sambogstedt@gmail.com" target="_blank">Email Me!</a>
+  </footer>
+
+  <script>
+    const slider = document.querySelector('.slider');
+    const slides = slider.querySelectorAll('img');
+    let index = 0;
+
+    // Function to update the slider instantly without a transition
+    function updateSliderInstantly() {
+      slider.style.transition = 'none'; // Disable transition
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Function to handle the next button click
+    document.querySelector('.next').onclick = () => {
+      index = (index + 1) % slides.length;
+      updateSliderInstantly();
+    };
+
+    // Function to handle the previous button click
+    document.querySelector('.prev').onclick = () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSliderInstantly();
+    };
+
+    // Function to go to the next image on click
+    slider.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateSliderInstantly();
+    });
+
+    // Optional: Reset the transition back to smooth after clicking
+    slider.addEventListener('transitionend', () => {
+      slider.style.transition = 'transform 0.5s ease'; // Re-enable transition for manual navigation
+    });
+  </script>
+</body>
+</html>

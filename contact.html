@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sam Bogstedt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px 20px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .logo a img {
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .page-title {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+
+    .page-title span:first-child {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .page-title span:last-child {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+
+    .contact-form {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #111;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .contact-form button:hover {
+      background-color: #333;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="page-title">
+      <span>Sam Bogstedt</span><br>
+      <span>Color Grading Portfolio</span>
+    </div>
+    <div class="nav-links" style="margin-left: auto;">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="submit_form.php" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <form action="https://formspree.io/f/xeoarbrr" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required placeholder="Your Name">
+  
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="Your Email">
+  
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/sambogstedt/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/sam-bogstedt-1901621b6/" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Sam Bogstedt</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Bogstedt | Color Grading Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px 20px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .logo a img {
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .categories a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      display: block;
+    }
+
+    .project-card h2 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 30px 40px 20px; border-bottom: 1px solid #ddd; flex-wrap: wrap;">
+      <div class="logo">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: #111;">
+          <img src="assets/logo.png" alt="Logo" style="height: 100px;">
+        </a>
+      </div>
+      <div style="text-align: center; flex-grow: 1; margin-left: -45px;">
+  <div style="font-size: 1.5rem; font-weight: 600;">Sam Bogstedt</div>
+  <div style="font-size: 1.125rem; font-weight: 400;">Color Grading Portfolio</div>
+</div>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+      </div>
+    </div>
+    <div class="categories">
+  <a href="#" data-filter="fiction">Fiction</a>
+  <a href="#" data-filter="documentary">Documentary</a>
+  <a href="#" data-filter="video">Video Clips</a>
+  <a href="#" data-filter="own">Own Work</a>
+</div>
+  </header>
+
+  <main>
+    <section class="grid" id="projectGrid">
+      <a href="project1.html" class="project-card" data-category="video">
+        <img src="assets/project1-thumb.jpg" alt="Project 1 thumbnail">
+        <h2>DOMINANCE OR SUBMISSION? — Graduation Pre Collection Teaser</h2>
+      </a>
+      <a href="project2.html" class="project-card" data-category="video">
+        <img src="assets/project2-thumb.jpg" alt="Project 2 thumbnail">
+        <h2>DOUBLE HARD BASTARDS - Fashion Teaser</h2>
+      </a>
+      <a href="project3.html" class="project-card" data-category="video">
+        <img src="assets/project3-thumb.jpg" alt="Project 3 thumbnail">
+        <h2>THE LAST OF THE TEENAGE IDOLS - Graduation Fashion Teaser</h2>
+      </a>
+      <a href="project4.html" class="project-card" data-category="documentary">
+        <img src="assets/project4-thumb.jpg" alt="Project 4 thumbnail">
+        <h2>IK BEEN BIJ JE - Documentary Trailer</h2>
+      </a>
+      <a href="project5.html" class="project-card" data-category="own">
+        <img src="assets/project5-thumb.jpg" alt="Project 5 thumbnail">
+        <h2>INVERSION – Experimental Film</h2>
+      </a>
+      <a href="project6.html" class="project-card" data-category="fiction">
+        <img src="assets/project6-thumb.jpg" alt="Project 6 thumbnail">
+        <h2>SILVERBACK – Short Film</h2>
+      </a>
+      <a href="project7.html" class="project-card" data-category="own">
+        <img src="assets/project7-thumb.jpg" alt="Project 7 thumbnail">
+        <h2>BEAUTY IN THE EYE OF THE BEHOLDER – Essay Film</h2>
+      </a>
+      <a href="project8.html" class="project-card" data-category="own">
+        <img src="assets/project8-thumb.jpg" alt="Project 8 thumbnail">
+        <h2>RESIDENT – Still Photo Film</h2>
+      </a>
+      
+      
+      
+      
+    </section>
+
+    <script>
+  document.querySelectorAll('.categories a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const category = link.getAttribute('data-filter');
+      document.querySelectorAll('.project-card').forEach(card => {
+        const matches = card.dataset.category === category;
+        card.style.display = matches || category === 'all' ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/sambogstedt/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/sam-bogstedt-1901621b6/" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Sam Bogstedt</p>
+    <a href="https://mail.google.com/mail/?view=cm&to=contact.sambogstedt@gmail.com" target="_blank">Email Me!</a>
+  </footer>
+</body>
+</html>
