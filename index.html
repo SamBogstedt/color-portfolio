@@ -128,35 +128,35 @@
 
   <main>
     <section class="grid" id="projectGrid">
-      <a href="project1.html" class="project-card" data-category="video">
+      <a href="project1.html" class="project-card" data-category="video" data-date="2024-05-24">
         <img src="assets/project1-thumb.jpg" alt="Project 1 thumbnail">
         <h2>DOMINANCE OR SUBMISSION? — Graduation Pre Collection Teaser</h2>
       </a>
-      <a href="project2.html" class="project-card" data-category="video">
+      <a href="project2.html" class="project-card" data-category="video" data-date="2025-03-22">
         <img src="assets/project2-thumb.jpg" alt="Project 2 thumbnail">
         <h2>DOUBLE HARD BASTARDS - Fashion Teaser</h2>
       </a>
-      <a href="project3.html" class="project-card" data-category="video">
+      <a href="project3.html" class="project-card" data-category="video" data-date="2024-04-24">
         <img src="assets/project3-thumb.jpg" alt="Project 3 thumbnail">
         <h2>THE LAST OF THE TEENAGE IDOLS - Graduation Fashion Teaser</h2>
       </a>
-      <a href="project4.html" class="project-card" data-category="documentary">
+      <a href="project4.html" class="project-card" data-category="documentary" data-date="2025-03-30">
         <img src="assets/project4-thumb.jpg" alt="Project 4 thumbnail">
         <h2>IK BEEN BIJ JE - Documentary Trailer</h2>
       </a>
-      <a href="project5.html" class="project-card" data-category="own">
+      <a href="project5.html" class="project-card" data-category="own" data-date="2024-03-10">
         <img src="assets/project5-thumb.jpg" alt="Project 5 thumbnail">
         <h2>INVERSION – Experimental Film</h2>
       </a>
-      <a href="project6.html" class="project-card" data-category="fiction">
+      <a href="project6.html" class="project-card" data-category="fiction" data-date="2023-01-30">
         <img src="assets/project6-thumb.jpg" alt="Project 6 thumbnail">
         <h2>SILVERBACK – Short Film</h2>
       </a>
-      <a href="project7.html" class="project-card" data-category="own">
+      <a href="project7.html" class="project-card" data-category="own" data-date="2023-09-18">
         <img src="assets/project7-thumb.jpg" alt="Project 7 thumbnail">
         <h2>BEAUTY IN THE EYE OF THE BEHOLDER – Essay Film</h2>
       </a>
-      <a href="project8.html" class="project-card" data-category="own">
+      <a href="project8.html" class="project-card" data-category="own" data-date="2023-07-04">
         <img src="assets/project8-thumb.jpg" alt="Project 8 thumbnail">
         <h2>RESIDENT – Still Photo Film</h2>
       </a>
@@ -188,5 +188,26 @@
     <p>&copy; 2025 Sam Bogstedt</p>
     <a href="https://mail.google.com/mail/?view=cm&to=contact.sambogstedt@gmail.com" target="_blank">Email Me!</a>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the container for project cards (assumes it has an ID of "projectGrid")
+      var container = document.getElementById('projectGrid');
+      
+      // Convert NodeList to an array
+      var cards = Array.from(container.getElementsByClassName('project-card'));
+      
+      // Sort the cards by data-date in descending order (newest first)
+      cards.sort(function(a, b) {
+        return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+      });
+      
+      // Clear the container and reappend sorted cards
+      container.innerHTML = '';
+      cards.forEach(function(card) {
+        container.appendChild(card);
+      });
+    });
+  </script>
+  
 </body>
 </html>
