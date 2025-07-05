@@ -105,6 +105,18 @@
 
     .prev { left: 10px; }
     .next { right: 10px; }
+    .fullscreen-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 1;
+    }
 
     .credits {
       text-align: centre;
@@ -157,6 +169,7 @@
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
+        <button class="fullscreen-btn">Fullscreen</button>
       </div>
       <div class="credits">
         <p><strong>Made by:</strong> Sam Bogstedt</p>
@@ -177,7 +190,19 @@
   <script>
     const slider = document.querySelector('.slider');
     const slides = slider.querySelectorAll('img');
+    const fullscreenBtn = document.querySelector('.fullscreen-btn');
+    const sliderWrapper = document.querySelector('.slider-wrapper');
     let index = 0;
+
+    fullscreenBtn.addEventListener("click", () => {
+      if (sliderWrapper.requestFullscreen) {
+        sliderWrapper.requestFullscreen();
+      } else if (sliderWrapper.webkitRequestFullscreen) {
+        sliderWrapper.webkitRequestFullscreen();
+      } else if (sliderWrapper.msRequestFullscreen) {
+        sliderWrapper.msRequestFullscreen();
+      }
+    });
 
     function updateSliderInstantly() {
       slider.style.transition = 'none';
