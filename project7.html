@@ -118,6 +118,21 @@
       z-index: 1;
     }
 
+    .slider-wrapper:fullscreen,
+    .slider-wrapper:-webkit-full-screen {
+      max-width: none;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slider-wrapper:fullscreen img,
+    .slider-wrapper:-webkit-full-screen img {
+      width: auto;
+      max-width: 100%;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+
     .credits {
       text-align: center;
       margin-top: 40px;
