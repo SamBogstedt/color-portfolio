@@ -102,25 +102,6 @@
       z-index: 1;
     }
 
-    .slider-wrapper.popout {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90vw;
-      height: 80vh;
-      max-width: none;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 1000;
-    }
-
-    .slider-wrapper.popout img {
-      width: 100%;
-      height: auto;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
 
     .slider-wrapper:fullscreen,
     .slider-wrapper:-webkit-full-screen {
@@ -136,7 +117,6 @@
       max-height: 100vh;
       object-fit: contain;
     }
-
 
 
     footer {
@@ -213,9 +193,6 @@
     let index = 0;
 
     fullscreenBtn.addEventListener('click', () => {
-
-      sliderWrapper.classList.toggle('popout');
-
       if (sliderWrapper.requestFullscreen) {
         sliderWrapper.requestFullscreen();
       } else if (sliderWrapper.webkitRequestFullscreen) {
@@ -223,7 +200,6 @@
       } else if (sliderWrapper.msRequestFullscreen) {
         sliderWrapper.msRequestFullscreen();
       }
-
     });
 
     // Function to update the slider instantly without a transition
