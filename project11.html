@@ -105,6 +105,37 @@
 
     .prev { left: 10px; }
     .next { right: 10px; }
+    .fullscreen-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 1;
+    }
+
+    .slider-wrapper.popout {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      height: 80vh;
+      max-width: none;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+    }
+
+    .slider-wrapper.popout img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
 
     .credits {
       text-align: centre;
@@ -165,6 +196,7 @@
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
+        <button class="fullscreen-btn">Fullscreen</button>
       </div>
       <div class="credits">
         <p><strong>Written and Directed by
@@ -207,7 +239,13 @@ Loeki van der Horst, Nurana Akbarova, Isabel Steegman
   <script>
     const slider = document.querySelector('.slider');
     const slides = slider.querySelectorAll('img');
+    const fullscreenBtn = document.querySelector('.fullscreen-btn');
+    const sliderWrapper = document.querySelector('.slider-wrapper');
     let index = 0;
+
+    fullscreenBtn.addEventListener('click', () => {
+      sliderWrapper.classList.toggle('popout');
+    });
 
     function updateSliderInstantly() {
       slider.style.transition = 'none';
