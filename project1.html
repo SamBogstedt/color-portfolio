@@ -94,6 +94,7 @@
       z-index: 1;
     }
 
+
     .slider-wrapper.popout {
       position: fixed;
       top: 50%;
@@ -110,6 +111,23 @@
       width: 100%;
       height: auto;
       max-height: 100%;
+      object-fit: contain;
+    }
+
+
+
+    .slider-wrapper:fullscreen,
+    .slider-wrapper:-webkit-full-screen {
+      max-width: none;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slider-wrapper:fullscreen img,
+    .slider-wrapper:-webkit-full-screen img {
+      width: auto;
+      max-width: 100%;
+      max-height: 100vh;
       object-fit: contain;
     }
 
@@ -200,7 +218,17 @@
     };
 
     fullscreenBtn.addEventListener('click', () => {
+     3sekt4-codex/add-button-for-gallery-slideshow
       sliderWrapper.classList.toggle('popout');
+
+      if (sliderWrapper.requestFullscreen) {
+        sliderWrapper.requestFullscreen();
+      } else if (sliderWrapper.webkitRequestFullscreen) {
+        sliderWrapper.webkitRequestFullscreen();
+      } else if (sliderWrapper.msRequestFullscreen) {
+        sliderWrapper.msRequestFullscreen();
+      }
+
     });
 
     // Function to go to the next image on click
