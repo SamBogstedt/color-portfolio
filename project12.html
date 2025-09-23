@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monkey Mind - Fiction Short Film</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px 20px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .logo a img {
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .page-title {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+
+    .page-title span:first-child {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .page-title span:last-child {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+
+    .gallery-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .gallery-section h1 {
+      font-size: 2em;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      width: 100%;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .credits {
+      text-align: centre;
+      margin-top: 40px;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <h1>Monkey Mind - Fiction Short Film</h1>
+      <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <img src="assets/project12-1.jpg" alt="Still 1">
+          <img src="assets/project12-2.jpg" alt="Still 2">
+          <img src="assets/project12-3.jpg" alt="Still 3">
+          <img src="assets/project12-4.jpg" alt="Still 4">
+          <img src="assets/project12-5.jpg" alt="Still 5">
+          <img src="assets/project12-6.jpg" alt="Still 6">
+          <img src="assets/project12-7.jpg" alt="Still 7">
+          <img src="assets/project12-8.jpg" alt="Still 8">
+          <img src="assets/project12-9.jpg" alt="Still 9">
+          <img src="assets/project12-10.jpg" alt="Still 9">
+          <img src="assets/project12-11.jpg" alt="Still 9">
+          <img src="assets/project12-12.jpg" alt="Still 9">
+          <img src="assets/project12-13.jpg" alt="Still 9">
+          <img src="assets/project12-14.jpg" alt="Still 9">
+
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="credits">
+        <p><strong>Written and Directed: Tijmen Snoep
+        <p><strong>Producer: Mia Tseboeva
+        <p><strong>DOP: Bert Idenburg
+        <p><strong>Edited by: Sam Bogstedt & Tijmen Snoep
+        <p><strong>1st AD: Sam Bogstedt
+        <p><strong>Cast
+        <p><strong>Robert Rosier
+        <p><strong>Stella Mancini
+        <p><strong>Mus Ruinen
+        <p><strong>Tristan Valkenburg
+        <p><strong>Line Producer: Anna Messechkova
+        <p><strong>Script Supervisor: Borislav Chobanov
+        <p><strong>Costume Designer: Lara Boon
+        <p><strong>Art Director: Agata Grochowska
+        <p><strong>1st AC: Alexander Dragomirov
+        <p><strong>Gaffer: Maria Palma
+        <p><strong>Spark: Ludvig Larusson, Augustin Weski
+        <p><strong>Hair and Make up: Lara Boon
+        <p><strong>Catering: Elia Messechkova Jones
+        <p><strong>Music Composer: Lilian Müller & Agamemnon Maziotis Vasileiou
+        <p><strong>Colorist: Sam Bogstedt
+        <p><strong>Sound Recordist: Nicolas Lopez
+        <p><strong>Sound Recordist Assistent: Celeste Wright
+        <p><strong>Sound Designer & Mixer: Agamemnon Maziotis Vasileiou
+        <p><strong>Poster Artwork: Agniet Snoep
+        <p><strong>Graphic Desinger & Poster Deisgn: David Avram
+        <p><strong>Special Thanks: Guissanée de Vartavan
+Rohan Sukhraj
+Tiuri van Megchelen
+Iga Wojak
+Park Zestienhoven
+Frank Schurunk
+Ilya & Judika  
+Leo Nijland
+Nina & Billy Bogstedt
+        <p><strong>Made Possible by: Het CultuurFonds
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/sambogstedt/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/sam-bogstedt-1901621b6/" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Sam Bogstedt</p>
+    <p><a href="https://mail.google.com/mail/?view=cm&to=contact.sambogstedt@gmail.com" target="_blank">Email Me!</a></p>
+  </footer>
+
+  <script>
+    const slider = document.querySelector('.slider');
+    const slides = slider.querySelectorAll('img');
+    let index = 0;
+
+    function updateSliderInstantly() {
+      slider.style.transition = 'none';
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.querySelector('.next').onclick = () => {
+      index = (index + 1) % slides.length;
+      updateSliderInstantly();
+    };
+
+    document.querySelector('.prev').onclick = () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSliderInstantly();
+    };
+
+    slider.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateSliderInstantly();
+    });
+  </script>
+</body>
+</html>
